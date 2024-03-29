@@ -1,0 +1,216 @@
+:root{
+  --green: rgb(17, 109, 55);
+  --lightgreen: rgb(148, 241, 90);
+}
+
+*{
+  font-family: "Roboto", sans-serif;
+  font-style: normal;
+}
+
+body{
+  padding:0;
+  margin:0;
+}
+
+.nav-container{
+  text-align: center;
+  padding-top: 1vh;
+  color: white;
+  font-weight: bold;
+  padding-bottom: 1vh;
+  font-size: 1.5rem;
+  background-color: var(--green);
+  display: flex;
+  width: 100%;
+  position: fixed;
+  z-index: 999;
+  
+}
+
+@keyframes shine {
+  from { -webkit-mask-position: 150%; }
+  to { -webkit-mask-position: -50%; }
+}
+
+.image-logo{
+  width: 100%;
+}
+
+strong, .col-6, .card-title{
+  -webkit-mask-image: linear-gradient(-75deg, rgba(0,0,0,.6) 30%, #000 50%, rgba(0,0,0,.6) 70%);
+  -webkit-mask-size: 200%;
+  animation: shine 2s linear infinite;
+}
+
+@keyframes tracking-in-expand {
+    0% {
+      letter-spacing: -0.5em;
+      opacity: 0;
+    }
+    40% {
+      opacity: 0.6;
+    }
+    100% {
+      opacity: 1;
+    }
+}
+  
+.about-natech{
+  padding-top: 10vh;
+  color: var(--green);
+  font-weight: bold;
+  text-align: center;
+  animation: tracking-in-expand 1s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+  animation-delay: 0.5s;
+}
+
+.projects-title{
+  text-align: center;
+  color: var(--green);
+  margin-top: 1vh;
+}
+
+.picture-area{
+  display: flex;
+  background-color: var(--green);
+  justify-content: space-between;
+  color: white;
+}
+
+.card-title, .text-center{
+  color: var(--green);
+}
+
+.goal-title,.goal-p {
+	-webkit-animation: text-focus-in 1s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+	        animation: text-focus-in 1s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+}
+
+@-webkit-keyframes text-focus-in {
+  0% {
+    -webkit-filter: blur(12px);
+            filter: blur(12px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-filter: blur(0px);
+            filter: blur(0px);
+    opacity: 1;
+  }
+}
+@keyframes text-focus-in {
+  0% {
+    -webkit-filter: blur(12px);
+            filter: blur(12px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-filter: blur(0px);
+            filter: blur(0px);
+    opacity: 1;
+  }
+}
+
+
+@-webkit-keyframes shadow-pop-tr {
+  0% {
+    -webkit-box-shadow: 0 0 var(--green), 0 0 var(--green), 0 0 var(--green), 0 0 var(--green), 0 0 var(--green), 0 0 var(--green), 0 0 var(--green), 0 0 var(--green);
+            box-shadow: 0 0 var(--green), 0 0 var(--green), 0 0 var(--green), 0 0 var(--green), 0 0 var(--green), 0 0 var(--green), 0 0 var(--green), 0 0 var(--green);
+    -webkit-transform: translateX(0) translateY(0);
+            transform: translateX(0) translateY(0);
+  }
+  100% {
+    -webkit-box-shadow: 1px -1px var(--green), 2px -2px var(--green), 3px -3px var(--green), 4px -4px var(--green), 5px -5px var(--green), 6px -6px var(--green), 7px -7px var(--green), 8px -8px var(--green);
+            box-shadow: 1px -1px var(--green), 2px -2px var(--green), 3px -3px var(--green), 4px -4px var(--green), 5px -5px var(--green), 6px -6px var(--green), 7px -7px var(--green), 8px -8px var(--green);
+    -webkit-transform: translateX(-8px) translateY(8px);
+            transform: translateX(-8px) translateY(8px);
+  }
+}
+
+@keyframes shadow-pop-tr {
+  0% {
+    -webkit-box-shadow: 0 0 var(--green), 0 0 var(--green), 0 0 var(--green), 0 0 var(--green), 0 0 var(--green), 0 0 var(--green), 0 0 var(--green), 0 0 var(--green);
+            box-shadow: 0 0 var(--green), 0 0 var(--green), 0 0 var(--green), 0 0 var(--green), 0 0 var(--green), 0 0 var(--green), 0 0 var(--green), 0 0 var(--green);
+    -webkit-transform: translateX(0) translateY(0);
+            transform: translateX(0) translateY(0);
+  }
+  100% {
+    -webkit-box-shadow: 1px -1px var(--green), 2px -2px var(--green), 3px -3px var(--green), 4px -4px var(--green), 5px -5px var(--green), 6px -6px var(--green), 7px -7px var(--green), 8px -8px var(--green);
+            box-shadow: 1px -1px var(--green), 2px -2px var(--green), 3px -3px var(--green), 4px -4px var(--green), 5px -5px var(--green), 6px -6px var(--green), 7px -7px var(--green), 8px -8px var(--green);
+    -webkit-transform: translateX(-8px) translateY(8px);
+            transform: translateX(-8px) translateY(8px);
+  }
+}
+
+.card {
+	-webkit-animation: shadow-pop-tr 0.3s cubic-bezier(0.470, 0.000, 0.745, 0.715) both;
+	        animation: shadow-pop-tr 0.3s cubic-bezier(0.470, 0.000, 0.745, 0.715) both;
+          animation-delay: 1s;
+}
+
+.images-color{
+  font-weight: bold;
+  color: white;
+}
+
+.bgcolor{
+  background-color: var(--green);
+}
+
+.caroussel-inner{
+  justify-content: center;
+}
+
+.accordion-button, .accordion-button[aria-expanded]{
+  color: white;
+  background-color: var(--green);
+}
+
+.accordion-button:hover{
+  box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1)
+}
+
+.accordion-body{
+  background-color: var(--lightgreen);
+}
+
+.contact, .row{
+  text-align: center;
+  color: white;
+}
+
+.col-6{
+  font-weight: bold;
+}
+
+@media only screen and (min-width: 320px) and (max-width:800px){
+  .nav-container{
+    text-align: center;
+    padding-top: 4vh;
+    color: white;
+    font-weight: bold;
+    padding-bottom: 8vh;  
+  }
+
+  .about-natech{
+    padding-top: 20vh;
+  }
+
+  .image-logo{
+    scale: 3;
+  }
+}
+
+@keyframes rotation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(359deg);
+  }
+}
+
+.contact-img{
+  animation: rotation 6s infinite linear;;
+}
